@@ -1,15 +1,15 @@
 class permainan {
     fun cek(pilihanPemain1:String?, pilihanPemain2:String?){
-        if (pilihanPemain1 == pilihanPemain2) {
+        if (pilihanPemain1.equals(pilihanPemain2)) {
             println("SERI tidak ada yang menang dan tidak ada yang kalah")
-        } else if (pilihanPemain1 == "batu" && pilihanPemain2 == "gunting" ||
-            pilihanPemain1 == "gunting" && pilihanPemain2 == "kertas" ||
-            pilihanPemain1 == "kertas" && pilihanPemain2 == "batu") {
-            println("Pemain 1 Menang, Pemain 2 Kalah, Hahaha")
-        } else if (pilihanPemain1 == "batu" && pilihanPemain2 == "kertas" ||
-            pilihanPemain1 == "gunting" && pilihanPemain2 == "batu" ||
-            pilihanPemain1 == "kertas" && pilihanPemain2 == "gunting") {
-            println("Pemain 1 Kalah, Pemain 2 Menang, Huhuhu")
+        } else if (pilihanPemain1.equals("BATU") && pilihanPemain2.equals("GUNTING") ||
+            pilihanPemain1.equals("GUNTING") && pilihanPemain2.equals("KERTAS" )||
+            pilihanPemain1.equals("KERTAS" )&& pilihanPemain2.equals("BATU") ){
+            println("Pemain 1 MENANG, Pemain 2 KALAH, Hahaha")
+        } else if (pilihanPemain1.equals("BATU") && pilihanPemain2.equals("KERTAS")||
+            pilihanPemain1.equals("GUNTING") && pilihanPemain2.equals("BATU") ||
+            pilihanPemain1.equals("KERTAS") && pilihanPemain2.equals("GUNTING")) {
+            println("Pemain 1 KALAH, Pemain 2 MENANG, Huhuhu")
         }
 
     }
@@ -17,8 +17,8 @@ class permainan {
     fun ambilPilihan(nomer: Int?):String? {
         var pemain : String?
         do { print("Pemain $nomer pilih apa ? (Gunting, Batu, Kertas) : ")
-            pemain = readLine()!!.toLowerCase().trim()
-            if(pemain == "gunting" || pemain == "batu" || pemain == "kertas"){
+            pemain = readLine()!!.toUpperCase().trim()
+            if(pemain.equals("GUNTING") || pemain.equals("BATU") || pemain.equals("KERTAS")){
                 break
             } else {
                 println("Pilihan Salah! pilih antara Gunting, Batu, atau Kertas")

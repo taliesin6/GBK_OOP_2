@@ -1,7 +1,10 @@
+// 2do
 // tambahin fitur scoring
 // tambahin main dengan komputer
 // tambahin menu
 // tambahin class
+// implementasi inheritance
+// impelmenetasi enum
 // ver 0.0.8
 
 fun main(){
