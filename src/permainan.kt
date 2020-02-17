@@ -14,6 +14,22 @@ class permainan {
 
     }
 
+    fun cek2(pilihanPemain1:String?, pilihanPemain2:String?){
+        if (pilihanPemain1.equals(pilihanPemain2)) {
+            println("SERI tidak ada yang menang dan tidak ada yang kalah")
+        } else if (pilihanPemain1.equals("BATU") && pilihanPemain2.equals("GUNTING") ||
+            pilihanPemain1.equals("GUNTING") && pilihanPemain2.equals("KERTAS" )||
+            pilihanPemain1.equals("KERTAS" )&& pilihanPemain2.equals("BATU") ){
+            println("Pemain 1 MENANG, Komputer KALAH, Hahaha")
+        } else if (pilihanPemain1.equals("BATU") && pilihanPemain2.equals("KERTAS")||
+            pilihanPemain1.equals("GUNTING") && pilihanPemain2.equals("BATU") ||
+            pilihanPemain1.equals("KERTAS") && pilihanPemain2.equals("GUNTING")) {
+            println("Pemain 1 KALAH, Komputer MENANG, Huhuhu")
+        }
+
+    }
+
+
     fun ambilPilihan(nomer: Int?):String? {
         var pemain : String?
         do { print("Pemain $nomer pilih apa ? (Gunting, Batu, Kertas) : ")
@@ -25,6 +41,11 @@ class permainan {
             }
         } while (true)
         return pemain
+    }
+
+    fun ambilPilihanK(): String {
+        val pilihanKomputer = arrayListOf<String>("GUNTING", "BATU", "KERTAS")
+        return pilihanKomputer.random()
     }
 
     //
